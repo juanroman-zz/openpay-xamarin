@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Openpay.Xamarin.Android", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Openpay.Xamarin.iOS", "Openpay.Xamarin.iOS\Openpay.Xamarin.iOS.csproj", "{4ED32A8C-5270-474D-96BE-019A48AACD98}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Openpay.Bindings.Android", "Openpay.Bindings.Android\Openpay.Bindings.Android.csproj", "{2E6DDF8F-64A7-4E4D-A709-E164AD31B496}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{4ED32A8C-5270-474D-96BE-019A48AACD98}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4ED32A8C-5270-474D-96BE-019A48AACD98}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4ED32A8C-5270-474D-96BE-019A48AACD98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E6DDF8F-64A7-4E4D-A709-E164AD31B496}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E6DDF8F-64A7-4E4D-A709-E164AD31B496}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E6DDF8F-64A7-4E4D-A709-E164AD31B496}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E6DDF8F-64A7-4E4D-A709-E164AD31B496}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
