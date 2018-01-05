@@ -1,0 +1,6 @@
+[submodule "_dependencies/openpay-android"]
+	path = _dependencies/openpay-android
+	url = https://github.com/open-pay/openpay-android.git
+[submodule "_dependencies/openpay-ios"]
+	path = _dependencies/openpay-ios
+	url = https://github.com/open-pay/openpay-ios.git
