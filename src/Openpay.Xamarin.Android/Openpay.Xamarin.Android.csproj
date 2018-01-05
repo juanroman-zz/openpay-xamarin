@@ -59,10 +59,6 @@
     <None Include="Resources\AboutResources.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Openpay.Bindings.Android\Openpay.Bindings.Android.csproj">
-      <Project>{2e6ddf8f-64a7-4e4d-a709-e164ad31b496}</Project>
-      <Name>Openpay.Bindings.Android</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Openpay.Xamarin.Abstractions\Openpay.Xamarin.Abstractions.csproj">
       <Project>{e0081281-8dc6-46a9-8642-f592378d974c}</Project>
       <Name>Openpay.Xamarin.Abstractions</Name>

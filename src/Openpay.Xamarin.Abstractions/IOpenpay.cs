@@ -4,10 +4,12 @@ namespace Openpay.Xamarin.Abstractions
 {
     public interface IOpenpay
     {
-        bool IsIntialized { get; }
+        void Initialize(string merchantId, string publicApiKey, bool productionMode);
 
-        void Initialize(string merchantId, string apiKey, bool productionMode);
+        Task<string> CreateDeviceSessionId();
 
-        Task<string> CreateDeviceSessionId(int timeout);
+        Task<Token> CreateTokenFromCard(Card card);
+
+        Task<Token> GetTokenFromId(string id);
     }
 }

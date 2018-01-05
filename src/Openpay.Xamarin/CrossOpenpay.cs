@@ -4,7 +4,7 @@ using System.Threading;
 
 namespace Openpay.Xamarin
 {
-    public class CrossOpenpay
+    public static class CrossOpenpay
     {
         private static Lazy<IOpenpay> _implementation = new Lazy<IOpenpay>(() => CreateOpenpay(), LazyThreadSafetyMode.PublicationOnly);
 
@@ -13,7 +13,7 @@ namespace Openpay.Xamarin
 
         private static IOpenpay CreateOpenpay()
         {
-#if NETSTANDARD1_0
+#if NETSTANDARD2_0
             return null;
 #else
             return new OpenpayImplementation();
