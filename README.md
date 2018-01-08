@@ -45,6 +45,37 @@ global::Openpay.Xamarin.OpenpayAndroidImpl.Init(this);
 LoadApplication(new App());
 ```
 
+## Usage
+Use from your shared project.
+### Creating tokens
+To create a token simply call *CreateTokenFromCard*:
+
+```csharp
+if (CrossOpenpay.IsSupported)
+{
+   Card card = new Card
+   {
+      HolderName = "Francisco Pantera",
+      Number = "4111111111111111",
+      ExpirationMonth = "12",
+        ExpirationYear = "21",
+        Cvv2 = 132
+    };
+
+    var token = await CrossOpenpay.Current.CreateTokenFromCard(card);
+}
+```
+
+### Fraud detection using device data
+To create a token simply call *CreateDeviceSessionId*:
+
+```csharp
+if (CrossOpenpay.IsSupported)
+{
+   var deviceSessionId = await CrossOpenpay.Current.CreateDeviceSessionId();
+}
+```
+
 ## License
 The MIT License (MIT) see [License file](LICENSE)
 
