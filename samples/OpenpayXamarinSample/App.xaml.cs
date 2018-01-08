@@ -1,27 +1,30 @@
 ﻿using System;
-
+using Openpay.Xamarin;
 using Xamarin.Forms;
 
 namespace OpenpayXamarinSample
 {
     public partial class App : Application
     {
-        public static bool UseMockDataStore = true;
-        public static string BackendUrl = "https://localhost:5000";
+        private const string MerchantId = "mi93pk0cjumoraf08tqt";
+        private const string ApiKey = "pk_92e31f7c77424179b7cd451d21fbb771";
 
         public App()
         {
             InitializeComponent();
 
-            if (UseMockDataStore)
-                DependencyService.Register<MockDataStore>();
-            else
-                DependencyService.Register<CloudDataStore>();
+            MainPage = new NavigationPage(new Pages.MainPage());
+        }
 
-            if (Device.RuntimePlatform == Device.iOS)
-                MainPage = new MainPage();
-            else
-                MainPage = new NavigationPage(new MainPage());
+        protected override void OnStart()
+        {
+            base.OnStart();
+
+            // Initialize Openpay
+            if (CrossOpenpay.IsSupported)
+            {
+                CrossOpenpay.Current.Initialize(MerchantId, ApiKey, false);
+            }
         }
     }
 }
