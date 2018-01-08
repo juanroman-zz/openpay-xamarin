@@ -48,13 +48,13 @@ namespace Openpay.Xamarin.Abstractions
         /// Mes de expiración tal como aparece en la tarjeta.
         /// </summary>
         [JsonProperty("expiration_month")]
-        public int ExpirationMonth { get; set; }
+        public string ExpirationMonth { get; set; }
 
         /// <summary>
         /// Año de expiración tal como aparece en la tarjeta.
         /// </summary>
         [JsonProperty("expiration_year")]
-        public int ExpirationYear { get; set; }
+        public string ExpirationYear { get; set; }
 
         /// <summary>
         /// Número de tarjeta, puede ser de 16 o 19 dígitos.

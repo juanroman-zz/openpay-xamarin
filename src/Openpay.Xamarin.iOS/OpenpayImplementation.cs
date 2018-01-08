@@ -10,23 +10,22 @@ namespace Openpay.Xamarin
 {
     public class OpenpayImplementation : OpenpayBaseImplementation
     {
-        protected override async Task<string> CreateDeviceSessionIdInternal(string merchantId, string apiKey, string baseUrl)
+        protected override Task<string> CreateDeviceSessionIdInternal(string merchantId, string apiKey, string baseUrl)
         {
             var sessionId = Guid.NewGuid().ToString().Replace("-", string.Empty);
 
             var identifierForVendor = UIDevice.CurrentDevice.IdentifierForVendor.AsString().Replace("-", string.Empty);
             var identifierForVendorScript = $"var identifierForVendor = '{identifierForVendor}';";
 
-
             using (WKWebView webView = new WKWebView(CGRect.Empty, new WKWebViewConfiguration()))
             {
-                await webView.EvaluateJavaScriptAsync(identifierForVendor);
+                webView.EvaluateJavaScript(identifierForVendor, null);
 
                 var url = $"{baseUrl}/oa/logo.htm?m={merchantId}&s={sessionId}";
                 webView.LoadRequest(new NSUrlRequest(new NSUrl(url)));
             }
 
-            return sessionId;
+            return Task.FromResult(sessionId);
         }
     }
 }

@@ -3,13 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Openpay.Xamarin.Abstractions", "Openpay.Xamarin.Abstractions\Openpay.Xamarin.Abstractions.csproj", "{E0081281-8DC6-46A9-8642-F592378D974C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Openpay.Xamarin.Abstractions", "Openpay.Xamarin.Abstractions\Openpay.Xamarin.Abstractions.csproj", "{E0081281-8DC6-46A9-8642-F592378D974C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Openpay.Xamarin", "Openpay.Xamarin\Openpay.Xamarin.csproj", "{64947980-AE90-4F23-BDD4-76F2BBC0FA79}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Openpay.Xamarin", "Openpay.Xamarin\Openpay.Xamarin.csproj", "{64947980-AE90-4F23-BDD4-76F2BBC0FA79}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Openpay.Xamarin.Android", "Openpay.Xamarin.Android\Openpay.Xamarin.Android.csproj", "{50DACFC8-3D33-4C90-B8E8-69E3D3557FD8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Openpay.Xamarin.iOS", "Openpay.Xamarin.iOS\Openpay.Xamarin.iOS.csproj", "{4ED32A8C-5270-474D-96BE-019A48AACD98}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "OpenpayXamarinSample", "..\samples\OpenpayXamarinSample\OpenpayXamarinSample.shproj", "{F1CB8A18-277E-490E-B5C2-D92E42C41531}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenpayXamarinSample.iOS", "..\samples\iOS\OpenpayXamarinSample.iOS.csproj", "{4B11E60F-7DFB-48C5-AC99-7D0FCBADB0F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenpayXamarinSample.Droid", "..\samples\Droid\OpenpayXamarinSample.Droid.csproj", "{F8D047B7-6609-4EBF-8074-25C3B3BD4607}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +75,30 @@ Global
 		{4ED32A8C-5270-474D-96BE-019A48AACD98}.Release|iPhone.Build.0 = Release|Any CPU
 		{4ED32A8C-5270-474D-96BE-019A48AACD98}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{4ED32A8C-5270-474D-96BE-019A48AACD98}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{4B11E60F-7DFB-48C5-AC99-7D0FCBADB0F1}.Debug|Any CPU.ActiveCfg = Debug|iPhoneSimulator
+		{4B11E60F-7DFB-48C5-AC99-7D0FCBADB0F1}.Debug|Any CPU.Build.0 = Debug|iPhoneSimulator
+		{4B11E60F-7DFB-48C5-AC99-7D0FCBADB0F1}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{4B11E60F-7DFB-48C5-AC99-7D0FCBADB0F1}.Debug|iPhone.Build.0 = Debug|iPhone
+		{4B11E60F-7DFB-48C5-AC99-7D0FCBADB0F1}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{4B11E60F-7DFB-48C5-AC99-7D0FCBADB0F1}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{4B11E60F-7DFB-48C5-AC99-7D0FCBADB0F1}.Release|Any CPU.ActiveCfg = Release|iPhone
+		{4B11E60F-7DFB-48C5-AC99-7D0FCBADB0F1}.Release|Any CPU.Build.0 = Release|iPhone
+		{4B11E60F-7DFB-48C5-AC99-7D0FCBADB0F1}.Release|iPhone.ActiveCfg = Release|iPhone
+		{4B11E60F-7DFB-48C5-AC99-7D0FCBADB0F1}.Release|iPhone.Build.0 = Release|iPhone
+		{4B11E60F-7DFB-48C5-AC99-7D0FCBADB0F1}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{4B11E60F-7DFB-48C5-AC99-7D0FCBADB0F1}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{F8D047B7-6609-4EBF-8074-25C3B3BD4607}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8D047B7-6609-4EBF-8074-25C3B3BD4607}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8D047B7-6609-4EBF-8074-25C3B3BD4607}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{F8D047B7-6609-4EBF-8074-25C3B3BD4607}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{F8D047B7-6609-4EBF-8074-25C3B3BD4607}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{F8D047B7-6609-4EBF-8074-25C3B3BD4607}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{F8D047B7-6609-4EBF-8074-25C3B3BD4607}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8D047B7-6609-4EBF-8074-25C3B3BD4607}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8D047B7-6609-4EBF-8074-25C3B3BD4607}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{F8D047B7-6609-4EBF-8074-25C3B3BD4607}.Release|iPhone.Build.0 = Release|Any CPU
+		{F8D047B7-6609-4EBF-8074-25C3B3BD4607}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{F8D047B7-6609-4EBF-8074-25C3B3BD4607}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
