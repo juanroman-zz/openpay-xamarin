@@ -32,7 +32,7 @@ namespace Openpay.Xamarin
                 var url = $"{baseUrl}/oa/logo.htm?m={merchantId}&s={sessionId}";
                 webView.LoadUrl(url);
 
-                return Task.FromResult(url);
+                return Task.FromResult(sessionId);
             }
         }
 

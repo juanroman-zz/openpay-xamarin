@@ -1,13 +1,10 @@
 ﻿using Android.App;
 using System;
 
-namespace Openpay.Xamarin.Android
+namespace Openpay.Xamarin
 {
-    public class OpenpayAndroidImpl
+    public static class OpenpayAndroidImpl
     {
-        public static void Init(Activity activity)
-        {
-            OpenpayImplementation.Activity = activity ?? throw new ArgumentNullException(nameof(activity));
-        }
+        public static void Init(Activity activity) => OpenpayImplementation.Activity = activity ?? throw new ArgumentNullException(nameof(activity));
     }
 }
