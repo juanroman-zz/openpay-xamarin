@@ -1,6 +1,6 @@
 # Openpay Client API built for Xamarin
 
-Xamarin based Cross-Platform client API for the [Openpay](https://www.openpay.mx/) platform. Openpay.Xamarin is NETSTANDARD - https://docs.microsoft.com/en-us/dotnet/standard/library
+Xamarin based Cross-Platform client API for the [Openpay](https://www.openpay.mx/) platform.
 
 ## Support Platforms
 * iOS 10+
@@ -80,7 +80,7 @@ if (CrossOpenpay.IsSupported)
 The MIT License (MIT) see [License file](LICENSE)
 
 ## Disclaimer
-*Xamarin.Openpay* is not supported by Openpay. For official client libraries see:
+*Openpay.Xamarin* is not supported by Openpay. For official client libraries see:
 * [openpay-android](https://github.com/open-pay/openpay-android)
 * [openpay-ios](https://github.com/open-pay/openpay-ios)
 * [openpay-swift-ios](https://github.com/open-pay/openpay-swift-ios)
