@@ -71,22 +71,22 @@ namespace OpenpayXamarinSample.ViewModels
             {
                 IsBusy = true;
 
-if (CrossOpenpay.IsSupported)
-{
-    Card card = new Card
-    {
-        HolderName = "Francisco Pantera",
-        Number = "4111111111111111",
-        ExpirationMonth = "12",
-        ExpirationYear = "21",
-        Cvv2 = 132
-    };
+                if (CrossOpenpay.IsSupported)
+                {
+                    Card card = new Card
+                    {
+                        HolderName = "Francisco Pantera",
+                        Number = "4111111111111111",
+                        ExpirationMonth = "12",
+                        ExpirationYear = "21",
+                        Cvv2 = 132
+                    };
 
-    _token = await CrossOpenpay.Current.CreateTokenFromCard(card);
-    TokenIdAvailable = true;
+                    _token = await CrossOpenpay.Current.CreateTokenFromCard(card);
+                    TokenIdAvailable = true;
 
-    await UserDialogs.Instance.AlertAsync($"Token created successfully: {_token.Id} for card '{_token.Card.Number}'.", "Success", "Ok");
-}
+                    await UserDialogs.Instance.AlertAsync($"Token created successfully: {_token.Id} for card '{_token.Card.Number}'.", "Success", "Ok");
+                }
             }
             catch (Exception exception)
             {
