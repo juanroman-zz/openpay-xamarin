@@ -2,7 +2,7 @@
 
 Xamarin based Cross-Platform client API for the [Openpay](https://www.openpay.mx/) platform.
 
-## Support Platforms
+## Supported Platforms
 * iOS 10+
 * Android
 * .NET Standard 2.0
