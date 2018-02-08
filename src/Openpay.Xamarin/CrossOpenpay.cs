@@ -6,9 +6,9 @@ namespace Openpay.Xamarin
 {
     public static class CrossOpenpay
     {
-        private static Lazy<IOpenpay> _implementation = new Lazy<IOpenpay>(() => CreateOpenpay(), LazyThreadSafetyMode.PublicationOnly);
+        private static Lazy<IOpenpay> _implementation = new Lazy<IOpenpay>(CreateOpenpay, LazyThreadSafetyMode.PublicationOnly);
 
-        public static bool IsSupported => null == _implementation.Value ? false : true;
+        public static bool IsSupported => null != _implementation.Value;
         public static IOpenpay Current => _implementation.Value ?? throw NotImplementedInReferenceAssembly();
 
         private static IOpenpay CreateOpenpay()
