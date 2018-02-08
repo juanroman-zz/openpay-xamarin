@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata minClientVersion="2.8.1">
         <id>Openpay.Xamarin</id>
-        <version>1.0.0.3</version>
+        <version>1.0.1.0</version>
         <title>Openpay API Client Library built for Xamarin</title>
         <authors>Juan Roman Escamilla</authors>
         <owners>juanroman</owners>
@@ -16,10 +16,13 @@
         <dependencies>
             <group targetFramework="netstandard2.0">
                 <dependency id="NETStandard.Library" version="2.0.0" />
+                <dependency id="Newtonsoft.Json" version="10.0.3" />
             </group>
             <group targetFramework="MonoAndroid10">
+                <dependency id="Newtonsoft.Json" version="10.0.3" />
             </group>
             <group targetFramework="Xamarin.iOS10">
+                <dependency id="Newtonsoft.Json" version="10.0.3" />
             </group>
         </dependencies>
     </metadata>

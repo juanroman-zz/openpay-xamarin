@@ -20,23 +20,23 @@ private const string ApiKey = "pk_92e31f7c77424179b7cd451d21fbb771";
 
 protected override OnStart()
 {
-   base.OnStart();
+    base.OnStart();
   
-   // Initialize Openpay
-   if (CrossOpenpay.IsSupported)
-   {
-      CrossOpenpay.Current.Initialize(MerchantId, ApiKey, false);
-   }
+    // Initialize Openpay
+    if (CrossOpenpay.IsSupported)
+    {
+        CrossOpenpay.Current.Initialize(MerchantId, ApiKey, false);
+    }
 }
 ```
 
 ### iOS
 ```
-   Nothing is necessary
+Nothing is necessary
 ```
 
 ### Android
-In your Android MainActivit.cs call
+In your Android MainActivity.cs call
 
 ```csharp
 global::Xamarin.Forms.Init(); // Platform specific init
@@ -53,11 +53,11 @@ To create a token simply call *CreateTokenFromCard*:
 ```csharp
 if (CrossOpenpay.IsSupported)
 {
-   Card card = new Card
-   {
-      HolderName = "Francisco Pantera",
-      Number = "4111111111111111",
-      ExpirationMonth = "12",
+    Card card = new Card
+    {
+        HolderName = "Francisco Pantera",
+        Number = "4111111111111111",
+        ExpirationMonth = "12",
         ExpirationYear = "21",
         Cvv2 = 132
     };
@@ -72,7 +72,7 @@ To create a token simply call *CreateDeviceSessionId*:
 ```csharp
 if (CrossOpenpay.IsSupported)
 {
-   var deviceSessionId = await CrossOpenpay.Current.CreateDeviceSessionId();
+    var deviceSessionId = await CrossOpenpay.Current.CreateDeviceSessionId();
 }
 ```
 
