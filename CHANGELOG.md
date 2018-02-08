@@ -1,4 +1,4 @@
-### 1.0.0.3
+### 1.0.1.0
 * Including Newtonsoft as package dependency
 * Minor performance optimizations
 
