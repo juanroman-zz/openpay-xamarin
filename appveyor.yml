@@ -19,10 +19,12 @@ dotnet_csproj:
 before_build:
   # Display .NET Core version
   - cmd: dotnet --version
-  # Display minimal restore text
-  - cmd: dotnet restore ./src/Openpay.Xamarin.Abstractions/Openpay.Xamarin.Abstractions.csproj --verbosity m
+  # Restore projects with detailed verbosity
+  - cmd: dotnet restore ./src/Openpay.Xamarin.Abstractions/Openpay.Xamarin.Abstractions.csproj --verbosity d
+  - cmd: dotnet restore ./src/Openpay.Xamarin/Openpay.Xamarin.csproj --verbosity d
 build_script:
-  - cmd: dotnet build ./src/Openpay.Xamarin.Abstractions/Openpay.Xamarin.Abstractions.csproj 
+  - cmd: dotnet build ./src/Openpay.Xamarin.Abstractions/Openpay.Xamarin.Abstractions.csproj
+  - cmd: dotnet build ./src/Openpay.Xamarin/Openpay.Xamarin.csproj
 after_build:
   # For once the build has completed
   # cmd: dotnet pack ./src/Xamarin.Openpay.Abstractions/Xamarin.Openpay.Abstractions.csproj /p:Version=%APPVEYOR_BUILD_VERSION%
