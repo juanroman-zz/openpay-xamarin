@@ -1,46 +1,19 @@
 version: '1.0.{build}'
 image: Visual Studio 2017
-branches:
-  only:
-  - master
-init:
-  # Good practise, because Windows line endings are different from Unix/Linux ones
-  - cmd: git config --global core.autocrlf true
-install:
-  # Install repo specific stuff here
-dotnet_csproj:
+configuration: Release
+environment:
+  CAKE_SETTINGS_SKIPVERIFICATION: true
+  ANDROID_HOME: 'C:\Program Files (x86)\Android\android-sdk\'
+assembly_info:
   patch: true
-  file: '**\*.csproj'
-  version: '{version}'
-  package_version: '{version}'
+  file: '**\AssemblyInfo.*'
   assembly_version: '{version}'
-  file_version: '{version}'
-  informational_version: '{version}'
-before_build:
-  # Display .NET Core version
-  - cmd: dotnet --version
-  # Restore projects with minimal verbosity
-  - cmd: dotnet restore ./src/Openpay.Xamarin.Abstractions/Openpay.Xamarin.Abstractions.csproj --verbosity m
-  - cmd: dotnet restore ./src/Openpay.Xamarin/Openpay.Xamarin.csproj --verbosity m
-  - cmd: dotnet restore ./src/Openpay.Xamarin.Android/Openpay.Xamarin.Android.csproj --verbosity m
-  - cmd: dotnet restore ./src/Openpay.Xamarin.iOS/Openpay.Xamarin.iOS.csproj --verbosity m
+  assembly_file_version: '{version}'
+  assembly_informational_version: '{version}'
 build_script:
-  - cmd: dotnet build ./src/Openpay.Xamarin.Abstractions/Openpay.Xamarin.Abstractions.csproj
-  - cmd: dotnet build ./src/Openpay.Xamarin/Openpay.Xamarin.csproj
-  - cmd: dotnet build ./src/Openpay.Xamarin.Android/Openpay.Xamarin.Android.csproj
-after_build:
-  # For once the build has completed
-  # cmd: dotnet pack ./src/Xamarin.Openpay.Abstractions/Xamarin.Openpay.Abstractions.csproj /p:Version=%APPVEYOR_BUILD_VERSION%
-clone_depth: 1
-test_script:
-  # restore packages for our unit tests
-  # cmd: dotnet restore ./test/StandardizedQR.XUnitTests/StandardizedQR.XUnitTests.csproj --verbosity m
-  # run the unit tests (requires changing into the test directory)
-  # cmd: cd test/StandardizedQR.XUnitTests
-  # cmd: dotnet test
-on_finish :
-  # any cleanup in here
+- cmd: >-
+    powershell .\build.ps1 -Target Default -Verbosity diagnostic
 artifacts:
-  # pushing all *.nupkg files in build directory recursively
-  # path: '**\*.nupkg'
+- path: ./Build/nuget/*.nupkg
+  name: NuGet
 deploy: off
