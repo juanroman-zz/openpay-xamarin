@@ -23,9 +23,11 @@ before_build:
   - cmd: dotnet restore ./src/Openpay.Xamarin.Abstractions/Openpay.Xamarin.Abstractions.csproj --verbosity m
   - cmd: dotnet restore ./src/Openpay.Xamarin/Openpay.Xamarin.csproj --verbosity m
   - cmd: dotnet restore ./src/Openpay.Xamarin.Android/Openpay.Xamarin.Android.csproj --verbosity m
+  - cmd: dotnet restore ./src/Openpay.Xamarin.iOS/Openpay.Xamarin.iOS.csproj --verbosity m
 build_script:
   - cmd: dotnet build ./src/Openpay.Xamarin.Abstractions/Openpay.Xamarin.Abstractions.csproj
   - cmd: dotnet build ./src/Openpay.Xamarin/Openpay.Xamarin.csproj
+  - cmd: dotnet build ./src/Openpay.Xamarin/Openpay.Xamarin.Android.csproj
 after_build:
   # For once the build has completed
   # cmd: dotnet pack ./src/Xamarin.Openpay.Abstractions/Xamarin.Openpay.Abstractions.csproj /p:Version=%APPVEYOR_BUILD_VERSION%
