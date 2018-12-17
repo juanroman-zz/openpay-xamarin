@@ -28,13 +28,13 @@
     </metadata>
     <files>
         <!-- Cross-platform reference assemblies -->
-        <file src="../src/Openpay.Xamarin/bin/Release/netstandard2.0/Openpay.Xamarin.*" target="lib/netstandard2.0" />
+        <file src="src\Openpay.Xamarin\bin\Release\netstandard2.0\Openpay.Xamarin.*" target="lib/netstandard2.0" />
 
         <!-- Android reference assemblies -->
-        <file src="../src/Openpay.Xamarin.Android/bin/Release/Openpay.Xamarin.*" target="lib/MonoAndroid10" />   
+        <file src="src\Openpay.Xamarin.Android\bin\Release\Openpay.Xamarin.*" target="lib/MonoAndroid10" />   
 
         <!-- iOS reference assemblies -->
-        <file src="../src/Openpay.Xamarin.iOS/bin/Release/Openpay.Xamarin.*" target="lib/Xamarin.iOS10" />
+        <file src="src\Openpay.Xamarin.iOS\bin\Release\Openpay.Xamarin.*" target="lib/Xamarin.iOS10" />
 
     </files>
 </package>
