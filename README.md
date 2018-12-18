@@ -1,6 +1,9 @@
 # Openpay Client API built for Xamarin
-
 Xamarin based Cross-Platform client API for the [Openpay](https://www.openpay.mx/) platform.
+
+[![NuGet](https://img.shields.io/nuget/v/Openpay.Xamarin.svg?label=NuGet)](https://www.nuget.org/packages/Openpay.Xamarin/)
+
+[![Build status](https://ci.appveyor.com/api/projects/status/rbj3ow6eupw4v43s?svg=true)](https://ci.appveyor.com/project/juanroman/openpay-xamarin)
 
 ## Supported Platforms
 * iOS 10+
@@ -8,8 +11,8 @@ Xamarin based Cross-Platform client API for the [Openpay](https://www.openpay.mx
 * .NET Standard 2.0
 
 ## Setup
-* Available on NuGet: https://www.nuget.org/packages/Openpay.Xamarin [![NuGet](https://img.shields.io/nuget/v/Openpay.Xamarin.svg?label=NuGet)](https://www.nuget.org/packages/Openpay.Xamarin/)
-* Install into your PCL project and Client projects.
+* Available on NuGet: https://www.nuget.org/packages/Openpay.Xamarin
+* Install into your .NET Standard/PCL project and Client projects.
 
 ### Initialize
 In your App.xaml.cs call
