@@ -6,7 +6,7 @@
         <title>Openpay API Client Library built for Xamarin</title>
         <authors>Juan Roman Escamilla</authors>
         <owners>juanroman</owners>
-        <licenseUrl>https://github.com/juanroman/openpay-xamarin/blob/master/LICENSE</licenseUrl>
+        <license type="expression">MIT</license>
         <projectUrl>https://github.com/juanroman/openpay-xamarin</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>Openpay (https://openpay.mx) client API built for Xamarin. Ensure you have proper permissions set by reading the README.</description>
