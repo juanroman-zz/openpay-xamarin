@@ -1,3 +1,6 @@
+### 1.0.18
+* Integrated AppVeyor build
+
 ### 1.0.2.1
 * Integrating AppVeyor for build
 
