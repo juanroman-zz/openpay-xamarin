@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
-    <metadata minClientVersion="4.3">
+    <metadata minClientVersion="3.3">
         <id>Openpay.Xamarin</id>
         <version>$version$</version>
         <title>Openpay API Client Library built for Xamarin</title>
@@ -36,6 +36,5 @@
 
         <!-- iOS reference assemblies -->
         <file src="src\Openpay.Xamarin.iOS\bin\Release\Openpay.Xamarin.*" target="lib/Xamarin.iOS10" />
-
     </files>
 </package>
