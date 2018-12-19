@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="3.4.0.1008975" />
+    <PackageReference Include="Acr.UserDialogs" Version="7.0.1" />
+    <PackageReference Include="Openpay.Xamarin" Version="1.0.25" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ViewModels\" />
+    <Folder Include="Pages\" />
+  </ItemGroup>
+</Project>
