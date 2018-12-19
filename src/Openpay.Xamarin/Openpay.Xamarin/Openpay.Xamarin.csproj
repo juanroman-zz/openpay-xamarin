@@ -1,0 +1,76 @@
+﻿<Project Sdk="MSBuild.Sdk.Extras/1.6.61">
+
+  <PropertyGroup>
+    <!--Work around so the conditions work below-->
+    <TargetFrameworks></TargetFrameworks>
+    <TargetFrameworks Condition=" '$(OS)' == 'Windows_NT' ">netstandard2.0;Xamarin.iOS10;MonoAndroid81</TargetFrameworks>
+    <TargetFrameworks Condition=" '$(OS)' != 'Windows_NT' ">netstandard2.0;Xamarin.iOS10;MonoAndroid81</TargetFrameworks>
+    
+    <AssemblyName>Openpay.Xamarin</AssemblyName>
+    <RootNamespace>Openpay.Xamarin</RootNamespace>
+    <PackageId>Openpay.Xamarin</PackageId>
+    
+    <Product>$(AssemblyName) ($(TargetFramework))</Product>
+    <AssemblyVersion>1.0.25.0</AssemblyVersion>
+    <AssemblyFileVersion>1.0.25.0</AssemblyFileVersion>
+    <Version>1.0.25.0</Version>
+    <PackageVersion>1.0.25.0</PackageVersion>
+    <PackOnBuild>true</PackOnBuild>
+    <NeutralLanguage>en</NeutralLanguage>
+    <LangVersion>default</LangVersion>
+    <DefineConstants>$(DefineConstants);</DefineConstants>
+    
+    <UseFullSemVerForNuGet>false</UseFullSemVerForNuGet>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+
+    <LangVersion>latest</LangVersion>
+    
+    <!--TODO: Fill these in-->
+    <PackageLicenseUrl>https://github.com/juanroman/openpay-xamarin/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/juanroman/openpay-xamarin</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/juanroman/openpay-xamarin</PackageProjectUrl>
+    <PackageTags>xamarin, pcl, xam.pcl, openpay, xamarin.android, xamarin.ios, android, xamarin.forms, ios, credit card</PackageTags>
+
+    <Title>Openpay API Client Library built for Xamarin</Title>
+    <Summary>Openpay (https://openpay.mx) client API built for Xamarin. Ensure you have proper permissions set by reading the README.</Summary>
+    <Description>
+      Openpay (https://openpay.mx) client API built for Xamarin. Ensure you have proper permissions set by reading the README.
+    </Description>
+
+
+    <Owners>juanroman</Owners>
+    <Authors>Juan Roman Escamilla</Authors>
+    <Copyright>Copyright 2018</Copyright>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)'=='Debug' ">
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)'=='Release' ">
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <DebugType>pdbonly</DebugType>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="**\*.shared.cs" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" $(TargetFramework.StartsWith('netstandard')) ">
+  </ItemGroup>
+
+  <ItemGroup Condition=" $(TargetFramework.StartsWith('MonoAndroid')) ">
+    <Compile Include="**\*.android.cs" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" $(TargetFramework.StartsWith('Xamarin.iOS')) ">
+    <Compile Include="**\*.apple.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
+  </ItemGroup>
+
+</Project>
