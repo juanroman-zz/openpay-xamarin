@@ -3,7 +3,7 @@ Xamarin based Cross-Platform client API for the [Openpay](https://www.openpay.mx
 
 [![NuGet](https://img.shields.io/nuget/v/Openpay.Xamarin.svg?label=NuGet)](https://www.nuget.org/packages/Openpay.Xamarin/)
 
-[![Build status](https://ci.appveyor.com/api/projects/status/rbj3ow6eupw4v43s?svg=true)](https://ci.appveyor.com/project/juanroman/openpay-xamarin)
+[![Build Status](https://dev.azure.com/juanromanmx/Openpay.Xamarin/_apis/build/status/Openpay.Xamarin-CI?branchName=master)](https://dev.azure.com/juanromanmx/Openpay.Xamarin/_build/latest?definitionId=2?branchName=master)
 
 ## Supported Platforms
 * iOS 10+
