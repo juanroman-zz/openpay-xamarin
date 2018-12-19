@@ -1,7 +1,7 @@
 ﻿using Android.App;
 using System;
 
-namespace Openpay.Xamarin
+namespace Openpay.Xamarin.Android
 {
     public static class OpenpayAndroidImpl
     {

@@ -1,5 +1,6 @@
 ﻿using Android.App;
 using Android.Provider;
+using Android.Runtime;
 using Android.Webkit;
 using Java.Util;
 using Openpay.Xamarin.Abstractions;
@@ -8,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace Openpay.Xamarin
 {
+    [Preserve(AllMembers = true)]
     public class OpenpayImplementation : OpenpayBaseImplementation
     {
         protected override Task<string> CreateDeviceSessionIdInternal(string merchantId, string apiKey, string baseUrl)

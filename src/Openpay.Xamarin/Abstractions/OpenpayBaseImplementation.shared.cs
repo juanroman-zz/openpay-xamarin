@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace Openpay.Xamarin.Abstractions
 {
+    /// <summary>
+    /// Implementación base del API de Openpay
+    /// </summary>
     public abstract class OpenpayBaseImplementation : IOpenpay
     {
         private const string SandboxUrl = "https://sandbox-api.openpay.mx";
@@ -16,6 +19,12 @@ namespace Openpay.Xamarin.Abstractions
         private string _baseUrl;
         private string _merchantId;
 
+        /// <summary>
+        /// Inicializa el API de Openpay con la configuración del consumidor
+        /// </summary>
+        /// <param name="merchantId">El identificador del cliente</param>
+        /// <param name="publicApiKey">La llave pública del API del cliente</param>
+        /// <param name="productionMode">If set to <c>true</c> production mode; de lo contrario, Sandbox.</param>
         public void Initialize(string merchantId, string publicApiKey, bool productionMode)
         {
             _merchantId = merchantId ?? throw new ArgumentNullException(merchantId);
@@ -23,6 +32,10 @@ namespace Openpay.Xamarin.Abstractions
             _baseUrl = productionMode ? ProductionUrl : SandboxUrl;
         }
 
+        /// <summary>
+        /// Crea una nueva sesión para tokenizar tarjetas.
+        /// </summary>
+        /// <returns>El identificador único de la sesión del cliente.</returns>
         public Task<string> CreateDeviceSessionId()
         {
             if (string.IsNullOrWhiteSpace(_baseUrl))
@@ -67,6 +80,12 @@ namespace Openpay.Xamarin.Abstractions
             return Get<Token>($"/v1/{_merchantId}/tokens/{id}");
         }
 
+        /// <summary>
+        /// Implementación por/plataforma de la solicitud del identificador de la sesión.
+        /// </summary>
+        /// <param name="merchantId">El identificador del cliente</param>
+        /// <param name="apiKey">La llave pública del API del cliente</param>
+        /// <param name="baseUrl">El URL al que se debe conectar la plataforma.</param>
         protected abstract Task<string> CreateDeviceSessionIdInternal(string merchantId, string apiKey, string baseUrl);
 
         private async Task<TResponse> Get<TResponse>(string requestUrl)
